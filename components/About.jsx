@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div className="min-h-screen w-full flex flex-col items-center  bg-[#9D7859]">
+    <div className="min-h-screen w-full flex flex-col items-center  bg-[#9D7859] font">
       <h2 className="w-[50%] text-5xl text-black mt-[3em] mb-[2em]">ABOUT THE PODCAST</h2>
       <div name="image and para container" className="flex w-[75%]">
         <div className="w-[50%]">Image</div>

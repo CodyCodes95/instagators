@@ -2,16 +2,17 @@ import React from 'react'
 import About from '../components/About';
 import FindUs from '../components/FindUs';
 import Landing from '../components/Landing';
+import PageContainer from '../components/PageContainer';
 import ShopSection from '../components/ShopSection';
 
 const index = () => {
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-center">
+    <PageContainer>
       <Landing />
       <About />
       <ShopSection />
       <FindUs />
-    </div>
+    </PageContainer>
   );
 }
 

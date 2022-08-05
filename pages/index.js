@@ -27,7 +27,19 @@ const Index = () => {
     })
   })
 
-  const stripe = loadStripe(publishableKey)
+  
+  const checkout = async ({ lineItems }) => {
+    const stripe = await loadStripe(publishableKey)
+        await stripe.redirectToCheckout({
+          shippingAddressCollection: {
+            allowedCountries: ["AU"]
+          },
+          mode: "payment",
+          lineItems,
+          successUrl: `${window.location.origin}?session_id={CHECKOUT_SESSION_ID}`,
+          cancelUrl: window.location.origin,
+        });
+  }
 
   return (
     <PageContainer>
@@ -35,7 +47,7 @@ const Index = () => {
       <About />
       <ShopSection borderNo={borderNo} borderlessNo={borderlessNo} setBorderNo={setBorderNo} setBorderlessNo={setBorderlessNo} />
       <FindUs />
-      {(borderNo > 0 || borderlessNo > 0) && <CheckoutButton borderNo={borderNo} borderlessNo={borderlessNo} />}
+      <CheckoutButton checkout={checkout} borderNo={borderNo} borderlessNo={borderlessNo} />
     </PageContainer>
   );
 }

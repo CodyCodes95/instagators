@@ -6,11 +6,11 @@ const About = () => {
       <h2 className="w-[50%] text-5xl text-black mt-[3em] mb-[2em]">
         ABOUT THE PODCAST
       </h2>
-      <div name="image and para container" className="flex w-[75%] items-center">
-              <div className="w-[50%] mr-10 mb-10">
+      <div name="image and para container" className="flex flex-col md:flex-row w-[75%] items-center m-5">
+              <div className="md:w-[50%] md:mr-10 mb-10">
                   <img src={josh.src} alt="" />
         </div>
-        <p className="w-[50%] text-2xl ml-10 font-Barlow">
+        <p className="md:w-[50%] text-2xl md:ml-10 font-Barlow">
           The Instagators is the Australian Car Scene Podcast you wanted and
           definitely needed. Have you ever wondered what ACTUALLY goes on behind
           the scenes of those cryptic IG stories or those events you weren’t

@@ -1,4 +1,4 @@
-import PageContainer from "./PageContainer"
+import PageContainer from "../../components/PageContainer"
 
 const Cart = () => {
   return (

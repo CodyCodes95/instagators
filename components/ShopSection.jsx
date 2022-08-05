@@ -1,5 +1,5 @@
 import Logo from "../public/logowhite.png";
-import StickerTrans from "../public/StickerTrans.png";
+import StickerTrans from "../public/stickerTrans.png";
 
 const ShopSection = () => {
   return (

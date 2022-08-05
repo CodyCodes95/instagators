@@ -1,6 +1,6 @@
 import { Link } from "react-scroll";
 import Logo from '../public/logo.png'
-import StickerTrans from '../public/StickerTrans.png'
+import StickerTrans from '../public/stickerTrans.png'
 
 const Landing = () => {
 

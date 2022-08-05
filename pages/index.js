@@ -5,7 +5,7 @@ import Landing from '../components/Landing';
 import PageContainer from '../components/PageContainer';
 import ShopSection from '../components/ShopSection';
 
-const index = () => {
+const Index = () => {
   return (
     <PageContainer>
       <Landing />
@@ -16,4 +16,4 @@ const index = () => {
   );
 }
 
-export default index
+export default Index

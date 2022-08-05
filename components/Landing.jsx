@@ -13,7 +13,7 @@ return (
       <img src={StickerTrans.src} alt="" />
     </div>
     <Link to="shop" smooth={true} duration={500}>
-      <button className="bg-gray-300 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-full ease-in-out duration-300 text-black px-20 mb-10">
+      <button className="bg-gray-300 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-full ease-in-out duration-300 text-black px-20 mb-10 mt-10">
         SHOP
       </button>
     </Link>

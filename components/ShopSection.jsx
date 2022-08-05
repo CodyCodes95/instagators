@@ -16,12 +16,16 @@ const ShopSection = () => {
       >
         <div className="flex flex-col w-[50%] items-center">
           <img className="w-[50%]" src={StickerTrans.src} alt="" />
-          <p className="my-5">Instagators sticker (no border)</p>
+          <p className="my-5 border-b-2 border-black">
+            Instagators sticker (no border)
+          </p>
           <p className="my-5">$10</p>
         </div>
         <div className="flex flex-col w-[50%] items-center">
           <img className="w-[50%]" src={StickerTrans.src} alt="" />
-          <p className="my-5">Instagators sticker (no border)</p>
+          <p className="my-5 border-b-2 border-black">
+            Instagators sticker (with border)
+          </p>
           <p className="my-5">$10</p>
         </div>
       </div>

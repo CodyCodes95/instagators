@@ -7,10 +7,18 @@ const FindUs = () => {
         Where To Listen
       </h2>
       <div className="flex w-[95%] justify-between text-white text-3xl">
-            <Link href="/">Youtube</Link>
-            <Link href="/">Spotify</Link>
-            <Link href="/">iTunes</Link>
-            <Link href="/">Buzzsprout</Link>
+        <Link href="https://www.youtube.com/channel/UCWSXWzUgZSTzd6eZSu8kU4Q">
+          <p className="border-b-2 border-white cursor-pointer">Youtube</p>
+        </Link>
+        <Link href="/">
+          <p className="border-b-2 border-white cursor-pointer">Spotify</p>
+        </Link>
+        <Link href="/">
+          <p className="border-b-2 border-white cursor-pointer">iTunes</p>
+        </Link>
+        <Link href="/">
+          <p className="border-b-2 border-white cursor-pointer">Buzzsprout</p>
+        </Link>
       </div>
     </div>
   );

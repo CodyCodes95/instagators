@@ -5,7 +5,7 @@ import StickerTrans from '../public/stickerTrans.png'
 const Landing = () => {
 
 return (
-  <div className="min-h-screen w-full flex flex-col items-center justify-between">
+  <div className="min-h-screen w-full flex flex-col items-center justify-between bg-[#FEFAF3]">
     <div className="max-w-[100%] md:max-w-[75%]">
       <img src={Logo.src} alt="" />
     </div>

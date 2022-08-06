@@ -14,6 +14,7 @@ const CheckoutButton = ({ borderNo, borderlessNo, checkout }) => {
           quantity: borderlessNo,
         });
       }
+        lineItems.push({ price: "price_1LTRseCsRpujmhwie99GG5yg", quantity: 1 });
       return lineItems;
       // Shipping item: price_1LTRseCsRpujmhwie99GG5yg
     }

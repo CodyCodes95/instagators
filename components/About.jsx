@@ -2,8 +2,8 @@ import josh from "../public/josh.JPG";
 
 const About = () => {
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-center font-bold  bg-[#FEFAF3] font">
-      <h2 className=" text-5xl text-black mt-[3em] mb-[2em]">
+    <div className="min-h-screen w-full flex flex-col items-center justify-center font-bold  bg-[#FEFAF3] font-Barlow">
+      <h2 className=" text-5xl text-black mt-[3em] mb-[2em] text-center">
         ABOUT THE PODCAST
       </h2>
       <div
@@ -11,7 +11,7 @@ const About = () => {
         className="flex flex-col md:flex-row w-[75%] items-center m-5"
       >
         <div className="md:w-[50%] md:mr-10 mb-10">
-          <img src={josh.src} alt="" />
+          <img src={josh.src} alt="spastic" />
         </div>
         <p className="md:w-[50%] text-2xl md:ml-10 font-Barlow">
           The Instagators is the Australian Car Scene Podcast you wanted and

@@ -4,13 +4,13 @@ const CheckoutButton = ({ borderNo, borderlessNo, checkout }) => {
       const lineItems = [];
       if (borderNo > 0) {
         lineItems.push({
-          price: "price_1LTRTHCsRpujmhwiCcwCGZ2j",
+          price: "price_1LTQDyCsRpujmhwi3GhR8orv",
           quantity: borderNo,
         });
       }
       if (borderlessNo > 0) {
         lineItems.push({
-          price: "price_1LTRTHCsRpujmhwiCcwCGZ2j",
+          price: "price_1LTQGzCsRpujmhwihNapv6zt",
           quantity: borderlessNo,
         });
       }

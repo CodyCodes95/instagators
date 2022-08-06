@@ -6,7 +6,7 @@ const FindUs = () => {
       <h2 className="w-[75%] text-5xl text-white mt-[3em] mb-[2em]">
         Where To Listen
       </h2>
-      <div className="flex w-[95%] justify-between text-white text-3xl">
+      <div className="flex flex-wrap w-[95%] justify-between text-white text-3xl mb-10">
         <Link href="https://www.youtube.com/channel/UCWSXWzUgZSTzd6eZSu8kU4Q">
           <p className="border-b-2 border-white cursor-pointer">Youtube</p>
         </Link>

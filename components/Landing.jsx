@@ -6,7 +6,7 @@ const Landing = () => {
 
 return (
   <div className="min-h-screen w-full flex flex-col items-center justify-between">
-    <div className="md:max-w-[75%]">
+    <div className="max-w-[100%] md:max-w-[75%]">
       <img src={Logo.src} alt="" />
     </div>
     <div className="md:max-w-[50%]">

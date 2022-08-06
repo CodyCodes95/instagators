@@ -2,8 +2,8 @@ import josh from "../public/josh.JPG";
 
 const About = () => {
   return (
-    <div className="min-h-screen w-full flex flex-col items-center  bg-[#FEFAF3] font">
-      <h2 className="w-[50%] text-5xl text-black mt-[3em] mb-[2em]">
+    <div className="min-h-screen w-full flex flex-col items-center justify-center font-bold  bg-[#FEFAF3] font">
+      <h2 className=" text-5xl text-black mt-[3em] mb-[2em]">
         ABOUT THE PODCAST
       </h2>
       <div

@@ -28,7 +28,7 @@ const CheckoutButton = ({ borderNo, borderlessNo, checkout }) => {
       }
       className={`${
         borderNo > 0 || borderlessNo > 0 ? "translate-y-[-5em]" : ""
-      } fixed bottom-[-2em] bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 text-3xl duration-300 ease-in-out`}
+      } fixed bottom-[-2em] bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 text-3xl duration-300 ease-in-out rounded-lg`}
     >
       Checkout
     </button>

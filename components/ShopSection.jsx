@@ -28,14 +28,14 @@ const ShopSection = ({borderNo, borderlessNo, setBorderlessNo, setBorderNo}) => 
       </div>
       <div
         name="shop item container"
-        className="flex flex-col md:flex-row text-center items-center justify-center text-lg"
+        className="flex flex-col md:flex-row text-center items-center justify-center text-2xl"
       >
         <div className="flex flex-col md:w-[50%] items-center">
           <img className="w-[50%]" src={StickerTrans.src} alt="" />
           <p className="my-5 border-b-2 border-black">
             Instagators sticker (no border)
           </p>
-          <p className="my-5">$10</p>
+          <p className="my-5 text-2xl">$10</p>
           <div className="flex mb-5">
             {borderlessNo > 0 && <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-2 rounded" onClick={() => decrease(false)}>-</button>}
             {borderlessNo === 0 && (
@@ -45,12 +45,12 @@ const ShopSection = ({borderNo, borderlessNo, setBorderlessNo, setBorderNo}) => 
             { borderlessNo > 0 && <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-2 rounded" onClick={() => increase(false)}>+</button>}
           </div>
         </div>
-        <div className="flex flex-col md:w-[50%] items-center">
+        <div className="flex flex-col md:w-[50%] items-center mt-20 md:mt-0">
           <img className="w-[50%]" src={StickerTrans.src} alt="" />
           <p className="my-5 border-b-2 border-black">
             Instagators sticker (with border)
           </p>
-          <p className="my-5">$10</p>
+          <p className="my-5 text-2xl">$10</p>
           <div className="flex mb-5">
             {borderNo > 0 && <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-2 rounded" onClick={() => decrease(true)}>-</button>}
             {borderNo === 0 && (

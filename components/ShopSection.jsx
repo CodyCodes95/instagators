@@ -23,7 +23,7 @@ const ShopSection = ({borderNo, borderlessNo, setBorderlessNo, setBorderNo}) => 
       name="shop"
       className="min-h-screen w-full flex flex-col items-center justify-around bg-[#FEFAF3]"
     >
-      <div className="md:max-w-[75%]">
+      <div className="">
         <img src={Logo.src} alt="" />
       </div>
       <div

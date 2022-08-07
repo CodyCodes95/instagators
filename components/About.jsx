@@ -1,4 +1,5 @@
 import josh from "../public/josh.JPG";
+import soldout from "../public/soldout.png";
 
 const About = () => {
   return (

@@ -6,11 +6,9 @@ import Landing from '../components/Landing';
 import PageContainer from '../components/PageContainer';
 import ShopSection from '../components/ShopSection';
 import { loadStripe } from '@stripe/stripe-js';
-import { Elements } from '@stripe/react-stripe-js';
 import { UserProvider } from "@auth0/nextjs-auth0";
 import ProductModel from '../models/productModel';
 import connectMongo from "../utils/connectMongo";
-import { stringify } from 'postcss';
 
 
 

@@ -32,18 +32,19 @@ const ShopSection = ({borderNo, borderlessNo, setBorderlessNo, setBorderNo}) => 
         className="flex flex-col md:flex-row text-center items-center justify-center text-2xl"
       >
         <div className="flex flex-col md:w-[50%] items-center">
-          <img className="w-[50%] opacity-50" src={StickerTrans.src} alt="" />
-          <img
+          <img className="w-[50%]" src={StickerTrans.src} alt="" />
+          {/* <img className="w-[50%] opacity-50" src={StickerTrans.src} alt="" /> */}
+          {/* <img
             className="absolute max-w-[250px]"
             src={soldout.src}
             alt="soldout"
-          />
+          /> */}
           <p className="my-5 border-b-2 border-black">
             Instagators sticker (no border)
           </p>
           <p className="my-5 text-2xl">$10</p>
           <div className="flex mb-5">
-            {/* {borderlessNo > 0 && (
+            {borderlessNo > 0 && (
               <button
                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-2 rounded"
                 onClick={() => decrease(false)}
@@ -67,22 +68,23 @@ const ShopSection = ({borderNo, borderlessNo, setBorderlessNo, setBorderNo}) => 
               >
                 +
               </button>
-            )} */}
+            )}
           </div>
         </div>
         <div className="flex flex-col md:w-[50%] items-center mt-20 md:mt-0">
-          <img className="w-[50%] opacity-50" src={StickerTrans.src} alt="" />
-          <img
+          <img className="w-[50%]" src={StickerTrans.src} alt="" />
+          {/* <img className="w-[50%] opacity-50" src={StickerTrans.src} alt="" /> */}
+          {/* <img
             className="absolute max-w-[250px]"
             src={soldout.src}
             alt="soldout"
-          />
+          /> */}
           <p className="my-5 border-b-2 border-black">
             Instagators sticker (with border)
           </p>
           <p className="my-5 text-2xl">$10</p>
           <div className="flex mb-5">
-            {/* {borderNo > 0 && (
+            {borderNo > 0 && (
               <button
                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-2 rounded"
                 onClick={() => decrease(true)}
@@ -106,7 +108,7 @@ const ShopSection = ({borderNo, borderlessNo, setBorderlessNo, setBorderNo}) => 
               >
                 +
               </button>
-            )} */}
+            )}
           </div>
         </div>
       </div>

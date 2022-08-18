@@ -7,10 +7,14 @@ import PageContainer from '../components/PageContainer';
 import ShopSection from '../components/ShopSection';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
+import { UserProvider } from "@auth0/nextjs-auth0";
+import ProductModel from '../models/productModel';
+import connectMongo from "../utils/connectMongo";
+import { stringify } from 'postcss';
 
 
 
-const Index = () => {
+const Index = ({products}) => {
 
   const [publishableKey, setPublishableKey] = useState('')
   const [borderNo, setBorderNo] = useState(0);
@@ -41,15 +45,31 @@ const Index = () => {
         });
   }
 
+  console.log(products)
+
+
   return (
+    <UserProvider>
     <PageContainer>
       <Landing />
       <About />
-      <ShopSection borderNo={borderNo} borderlessNo={borderlessNo} setBorderNo={setBorderNo} setBorderlessNo={setBorderlessNo} />
+      <ShopSection borderNo={borderNo} borderlessNo={borderlessNo} setBorderNo={setBorderNo} setBorderlessNo={setBorderlessNo} products={products} />
       <FindUs />
       <CheckoutButton checkout={checkout} borderNo={borderNo} borderlessNo={borderlessNo} />
     </PageContainer>
+    </UserProvider>
   );
 }
+
+  export const getServerSideProps = async () => {
+    await connectMongo();
+    const products = await ProductModel.find();
+    return {
+      props: {
+        products: JSON.parse(JSON.stringify(products)),
+      },
+    };
+  };
+
 
 export default Index

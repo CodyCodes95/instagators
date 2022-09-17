@@ -15,7 +15,9 @@ const index = () => {
         available: bool
       })
     }
-  )} 
+    )
+  } 
+  
   return (
       <PageContainer>
         <Link href="..">

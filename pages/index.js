@@ -47,7 +47,6 @@ const Index = ({products}) => {
 
 
   return (
-    <UserProvider>
     <PageContainer>
       <Landing />
       <About />
@@ -55,7 +54,6 @@ const Index = ({products}) => {
       <FindUs />
       <CheckoutButton checkout={checkout} borderNo={borderNo} borderlessNo={borderlessNo} />
     </PageContainer>
-    </UserProvider>
   );
 }
 

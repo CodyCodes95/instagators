@@ -5,17 +5,16 @@ import PageContainer from "../../components/PageContainer";
 const index = () => {
 
   const changeAvailability = (id, bool) => {
-    fetch((`http://localhost:3000/api/products/update`), {
+    fetch(`https://theinstagator.com.au/api/products/update`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
-      body:JSON.stringify({
+      body: JSON.stringify({
         id: id,
-        available: bool
-      })
-    }
-    )
+        available: bool,
+      }),
+    });
   } 
   
   return (

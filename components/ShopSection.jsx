@@ -2,6 +2,7 @@
 import Logo from "../public/logowhite.png";
 import StickerTrans from "../public/stickerTrans.png";
 import soldout from "../public/soldout.png";
+import skateBoard from "../public/skateb.png";
 
 export const getServerSideProps = async () => {
   const res = await fetch(
@@ -15,21 +16,19 @@ export const getServerSideProps = async () => {
   };
 };
 
-const ShopSection = ({borderNo, borderlessNo, setBorderlessNo, setBorderNo, products}) => {
+const ShopSection = ({borderNo, borderlessNo, setBorderlessNo, setBorderNo, products, board, setBoard}) => {
 
-
-
-    const addToCart = (border) => {
-        border ? setBorderNo(1) : setBorderlessNo(1)
+    const addToCart = (setter) => {
+        setter(1)
     }
 
-        const decrease = (border) => {
-          border ? setBorderNo(borderNo - 1) : setBorderlessNo(borderlessNo - 1);
-        };
-    
-        const increase = (border) => {
-          border ? setBorderNo(borderNo + 1) : setBorderlessNo(borderlessNo + 1);
-        };
+  const changeQuant = (product, setter, op) => {
+    if (op == "+") {
+      setter(product + 1);
+    } else if (op == "-") {
+      setter(product - 1);
+    }
+  }
 
   return (
     <div
@@ -41,7 +40,7 @@ const ShopSection = ({borderNo, borderlessNo, setBorderlessNo, setBorderNo, prod
       </div>
       <div
         name="shop item container"
-        className="flex flex-col md:flex-row text-center items-center justify-center text-2xl"
+        className="flex flex-col md:flex-row text-center items-center justify-center text-2xl flex-wrap"
       >
         {products[0].available ? (
           <div className="flex flex-col md:w-[50%] items-center">
@@ -54,7 +53,9 @@ const ShopSection = ({borderNo, borderlessNo, setBorderlessNo, setBorderNo, prod
               {borderlessNo > 0 && (
                 <button
                   className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-2 rounded"
-                  onClick={() => decrease(false)}
+                  onClick={() =>
+                    changeQuant(borderlessNo, setBorderlessNo, "-")
+                  }
                 >
                   -
                 </button>
@@ -62,7 +63,7 @@ const ShopSection = ({borderNo, borderlessNo, setBorderlessNo, setBorderNo, prod
               {borderlessNo === 0 && (
                 <button
                   className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                  onClick={() => addToCart(false)}
+                  onClick={() => addToCart(setBorderlessNo)}
                 >
                   Add to cart
                 </button>
@@ -71,7 +72,9 @@ const ShopSection = ({borderNo, borderlessNo, setBorderlessNo, setBorderNo, prod
               {borderlessNo > 0 && (
                 <button
                   className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-2 rounded"
-                  onClick={() => increase(false)}
+                  onClick={() =>
+                    changeQuant(borderlessNo, setBorderlessNo, "+")
+                  }
                 >
                   +
                 </button>
@@ -104,7 +107,7 @@ const ShopSection = ({borderNo, borderlessNo, setBorderlessNo, setBorderNo, prod
               {borderNo > 0 && (
                 <button
                   className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-2 rounded"
-                  onClick={() => decrease(true)}
+                  onClick={() => changeQuant(borderNo, setBorderNo, "-")}
                 >
                   -
                 </button>
@@ -112,7 +115,7 @@ const ShopSection = ({borderNo, borderlessNo, setBorderlessNo, setBorderNo, prod
               {borderNo === 0 && (
                 <button
                   className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                  onClick={() => addToCart(true)}
+                  onClick={() => addToCart(setBorderNo)}
                 >
                   Add to cart
                 </button>
@@ -121,7 +124,7 @@ const ShopSection = ({borderNo, borderlessNo, setBorderlessNo, setBorderNo, prod
               {borderNo > 0 && (
                 <button
                   className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-2 rounded"
-                  onClick={() => increase(true)}
+                  onClick={() => changeQuant(borderNo, setBorderNo, "+")}
                 >
                   +
                 </button>
@@ -132,18 +135,52 @@ const ShopSection = ({borderNo, borderlessNo, setBorderlessNo, setBorderNo, prod
           <div className="flex flex-col md:w-[50%] items-center mt-20 md:mt-0">
             <img className="w-[50%] opacity-50" src={StickerTrans.src} alt="" />
             <img
-            className="absolute max-w-[250px]"
-            src={soldout.src}
-            alt="soldout"
-          />
+              className="absolute max-w-[250px]"
+              src={soldout.src}
+              alt="soldout"
+            />
             <p className="my-5 border-b-2 border-black">
               Instagators sticker (with border)
             </p>
             <p className="my-5 text-2xl">$10</p>
-            <div className="flex mb-5">
-            </div>
+            <div className="flex mb-5"></div>
           </div>
         )}
+        <div className="flex flex-col md:w-[50%] items-center mt-20 md:mt-0">
+          <img className="w-[50%]" src={skateBoard.src} alt="" />
+
+          <p className="my-5 border-b-2 border-black">
+            Sh*tbox Skateboard (PREORDER)
+          </p>
+          <p className="my-5 text-2xl">$65</p>
+          <div className="flex mb-5">
+            {board > 0 && (
+              <button
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-2 rounded"
+                onClick={() => changeQuant(board, setBoard, "-")}
+              >
+                -
+              </button>
+            )}
+            {board === 0 && (
+              <button
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-5"
+                onClick={() => addToCart(setBoard)}
+              >
+                Add to cart
+              </button>
+            )}
+            {board > 0 && <p className="mx-3">{board}</p>}
+            {board > 0 && (
+              <button
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-2 rounded"
+                onClick={() => changeQuant(board, setBoard, "+")}
+              >
+                +
+              </button>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );

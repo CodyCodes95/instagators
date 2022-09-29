@@ -17,6 +17,7 @@ const Index = ({products}) => {
   const [publishableKey, setPublishableKey] = useState('')
   const [borderNo, setBorderNo] = useState(0);
   const [borderlessNo, setBorderlessNo] = useState(0);
+  const [board, setBoard] = useState(0);
 
   useEffect(() => {
     fetch('api/keys', {
@@ -50,9 +51,9 @@ const Index = ({products}) => {
     <PageContainer>
       <Landing />
       <About />
-      <ShopSection borderNo={borderNo} borderlessNo={borderlessNo} setBorderNo={setBorderNo} setBorderlessNo={setBorderlessNo} products={products} />
+      <ShopSection borderNo={borderNo} borderlessNo={borderlessNo} setBorderNo={setBorderNo} setBorderlessNo={setBorderlessNo} products={products} board={board} setBoard={setBoard} />
       <FindUs />
-      <CheckoutButton checkout={checkout} borderNo={borderNo} borderlessNo={borderlessNo} />
+      <CheckoutButton checkout={checkout} borderNo={borderNo} borderlessNo={borderlessNo} board={board} />
     </PageContainer>
   );
 }
